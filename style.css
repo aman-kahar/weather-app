@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background: linear-gradient(90deg, #99cfe0, #e8f4f8);
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header h1 {
+  font-family: "Edu AU VIC WA NT Arrows", serif;
+  color: #08457e;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin-top: 1rem;
+  color: white;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(90deg,  #e8f4f8,#ade3fc);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.location-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.list {
+  color: #002e63;
+  font-size: 1rem;
+  flex: 50%;
+  position: relative;
+  padding-left: 1rem;
+  height: 3rem;
+  width: 15rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+button {
+  padding: 15px 20px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  background: #e7feff;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 6px 0px inset,
+    rgba(0, 0, 0, 0.2) -3px -3px 6px 1px inset;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.firstBox, .secondBox, .thirdBox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 30%;
+  width: 50vw;
+  height: 65vh;
+}
+
+.weatherInfo {
+  text-align: center;
+  padding: 1.5rem 3rem;
+  margin-top: 6rem;
+  background: linear-gradient(90deg, #8cbed6, #e8f4f8);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.cityInfo {
+  color: #007fbf;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.tempInfo img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.temp {
+  color: #00416a;
+  font-size: 2rem;
+  padding: 0.3rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.cloudsInfo {
+  color: #126180;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.upcomingForecastInfo,.next4DaysForecastInfo{
+  text-align: center;
+  padding: 1rem 4rem;
+  margin-top: 9rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #8cbed6, #e8f4f8);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.upcomingForecastHeader,.next4DaysForecastHeader {
+  background: linear-gradient(90deg, #8cbed6, #e8f4f8);
+  color: #002e63;
+  font-size: 1.2rem;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.next, .day {
+  padding: 1rem 0;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.upcomingTemp, .daysTemp{
+  color: #006994;
+  font-size: 1.2rem;
+}
+
+.week,.templist{
+  padding: 1rem 0;
+}
+
+.time,
+.date {
+  color: #483d8b;
+  font-size: 1.2rem;
+}
+
+.weatherDesc {
+  color: #4166f5;
+  text-transform: capitalize;
+}
+
+.createdBy{
+  color: #08457e;
+}
+
+
+@media (max-width: 1440px) {
+  .heading{
+    margin-bottom: 1rem;
+  }
+
+}
+
+@media(max-width:1175px){
+  .main{
+    flex-direction: column;
+    align-items: center;
+  }
+  .firstBox{
+    order: 1;
+  }
+  .secondBox{
+    order: 2;
+  }
+  .thirdBox{
+    order: 3;
+    margin-bottom: 3rem;
+  }
+
+  .upcomingForecastInfo,.next4DaysForecastInfo,.weatherInfo{
+    margin-top: 3rem;
+  }
+
+
+}
+
+@media (max-width:900px){
+  .heading{
+    font-size: 0.7rem;
+  }
+  .list{
+     height: 2.5rem;
+     width: 10rem;
+  }
+}
+
+@media(max-width:600px){
+  .list{
+    width: 90%;
+    margin: 4px 20px;
+  }
+  button{
+    margin-left: 1.2rem;
+    margin-top: 3px;
+   width: 90%;
+  }
+}
+
+
+

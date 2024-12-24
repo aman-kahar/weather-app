@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="heading">
+          <h1>What Today's Weather Tells Us...</h1>
+        </div>
+
+        <div class="loaction-list">
+          <select id="countrySelect" class="list country" onchange="getState()">
+            <option selected>Select Country</option>
+          </select>
+          <select id="stateSelect" class="list state" onchange="getCity()">
+            <option selected>Select State</option>
+          </select>
+          <select id="citySelect" class="list city">
+            <option selected>Select City</option>
+          </select>
+
+          <button id="searchButton">Search</button>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div class="main">
+      <div class="secondBox">
+        <div class="upcomingForecastInfo">
+          <p class="upcomingForecastHeader">Upcoming Forecast...</p>
+          <div class="templist">
+            <div class="next">
+              <div>
+                <p class="time">8:30 PM</p>
+                <p class="upcomingTemp">29°C / 25°C</p>
+              </div>
+              <div>
+                <p class="weatherDesc">Light Rain</p>
+              </div>
+            </div>
+          </div>
+          <p class="createdBy"> ---> Created by ---> </p>
+        </div>
+      </div>
+
+      <div class="firstBox">
+        <div class="weatherInfo">
+          <h2 class="cityInfo">City,CN</h2>
+          <div class="tempInfo">
+            <img
+              src="./images/cloud.jpeg"
+              class="weatherImg"
+              alt="weather-image"
+            />
+            <p class="temp">25°C</p>
+          </div>
+          <span class="cloudsInfo">Broken Clouds</span>
+        </div>
+      </div>
+
+      <div class="thirdBox">
+        <div class="next4DaysForecastInfo">
+          <p class="next4DaysForecastHeader">Next 4 Days Forecast...</p>
+          <div class="week">
+            <div class="day">
+              <div>
+                <p class="date">Sun JUL 03 2020</p>
+                <p class="daysTemp">31°C / 25°C</p>
+              </div>
+              <div>
+                <p class="weatherDesc">Overcast Clouds</p>
+              </div>
+            </div>
+          </div>
+          <p class="createdBy">☻AMAN KAHAR☻</p>
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
