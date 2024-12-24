@@ -236,6 +236,10 @@ button:hover {
     margin-top: 3px;
    width: 90%;
   }
+  .upcomingForecastInfo,.next4DaysForecastInfo,.upcomingForecastHeader,.next4DaysForecastHeader{
+   width: 90%;
+  }
+
 }
 
 
