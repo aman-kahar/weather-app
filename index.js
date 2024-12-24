@@ -235,9 +235,8 @@ const hourForecast = async (data2) => {
     let div = document.createElement("div");
     let time = document.createElement("p");
     time.setAttribute("class", "time");
-    time.innerText = date
-      .toLocaleTimeString(undefined, "Asia/Kolkata")
-      .replace(":00", "");
+
+    time.innerText = date.toLocaleTimeString().replace(":00", "");
 
     let temp = document.createElement("p");
     temp.setAttribute("class", "upcomingTemp");
@@ -264,18 +263,39 @@ const hourForecast = async (data2) => {
 };
 
 const dayForecast = async (data2) => {
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
   document.querySelector(".week").innerHTML = "";
   for (let i = 8; i < data2.list.length; i += 8) {
     let div = document.createElement("div");
     div.setAttribute("class", "day");
 
-    let day = document.createElement("p");
-    day.setAttribute("class", "date");
-    day.innerText = new Date(data2.list[i].dt * 1000).toDateString(
-      undefined,
-      "Asia/Kolkata"
-    );
-    div.appendChild(day);
+    let date = document.createElement("p");
+    date.setAttribute("class", "date");
+
+    const dayDate = new Date(data2.list[i].dt * 1000);
+
+    const day = dayDate.getDate(); // Get the day of the month
+    const month = monthNames[dayDate.getMonth()]; // Get the month name
+    const year = dayDate.getFullYear(); // Get the full year
+    const finalDate = `${day} ${month} ${year}`;
+
+    date.innerText = finalDate;
+
+    div.appendChild(date);
 
     let temp = document.createElement("p");
     temp.setAttribute("class", "daysTemp");
