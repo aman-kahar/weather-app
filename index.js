@@ -148,7 +148,7 @@ window.addEventListener("load", async () => {
 });
 
 const getGeoLocation = async (lat, lon) => {
-  const weather_url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weather_api_key}`;
+  const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weather_api_key}`;
 
   try {
     const response = await fetch(weather_url);
@@ -186,7 +186,7 @@ const getOptionValue = (select, val) => {
 
 const searchByName = async (place) => {
   var urlsearch =
-    `http://api.openweathermap.org/data/2.5/weather?q=${place}&` +
+    `https://api.openweathermap.org/data/2.5/weather?q=${place}&` +
     `appid=${weather_api_key}`;
 
   try {
@@ -199,7 +199,7 @@ const searchByName = async (place) => {
 };
 
 const getWeatherInfo = async (data) => {
-  var weather_url2 = `http://api.openweathermap.org/data/2.5/forecast?q=${data.name}&appid=${weather_api_key}`;
+  var weather_url2 = `https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&appid=${weather_api_key}`;
   try {
     const response = await fetch(weather_url2);
     const data2 = await response.json();
@@ -217,7 +217,7 @@ const getWeatherInfo = async (data) => {
       data.weather[0].description;
 
     document.querySelector(".weatherImg").src =
-      "http://api.openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+      "https://api.openweathermap.org/img/w/" + data.weather[0].icon + ".png";
   } catch {
     console.error(error);
   }
