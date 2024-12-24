@@ -192,6 +192,7 @@ const searchByName = async (place) => {
   try {
     const response = await fetch(urlsearch);
     const data = await response.json();
+
     getWeatherInfo(data);
   } catch (error) {
     console.error(error);
