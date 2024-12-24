@@ -239,7 +239,7 @@ const hourForecast = async (data2) => {
       .replace(":00", "");
 
     let temp = document.createElement("p");
-    temp.setAttribute("class","upcomingTemp");
+    temp.setAttribute("class", "upcomingTemp");
     temp.innerText =
       "⬆️" +
       Math.floor(data2.list[i].main.temp_max - 273) +
@@ -277,7 +277,7 @@ const dayForecast = async (data2) => {
     div.appendChild(day);
 
     let temp = document.createElement("p");
-    temp.setAttribute("class","daysTemp");
+    temp.setAttribute("class", "daysTemp");
     temp.innerText =
       "⬆️" +
       Math.floor(data2.list[i].main.temp_max - 273) +
